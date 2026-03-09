@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+<meta charset="UTF-8">
+<title>ERROR STORY STORE</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+margin:0;
+text-align:center;
+color:white;
+}
+
+header{
+background:#22c55e;
+padding:20px;
+font-size:28px;
+font-weight:bold;
+color:black;
+}
+
+input{
+padding:12px;
+border-radius:10px;
+border:none;
+margin:20px;
+width:260px;
+font-size:16px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#1e293b;
+border-radius:15px;
+padding:20px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+color:white;
+}
+
+.uc{
+width:70px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#facc15;
+font-weight:bold;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:10px 18px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>ERROR STORY STORE</header>
+
+<h2>شحن UC</h2>
+
+<input id="playerid" placeholder="Player ID">
+
+<div class="grid">
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>30 + 2 UC</h3>
+<p>0.44 €</p>
+<button onclick="order('30 + 2 UC',0.44)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>60 + 4 UC</h3>
+<p>0.89 €</p>
+<button onclick="order('60 + 4 UC',0.89)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>300 + 43 UC</h3>
+<p>4.49 €</p>
+<button onclick="order('300 + 43 UC',4.49)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>600 + 96 UC</h3>
+<p>8.99 €</p>
+<button onclick="order('600 + 96 UC',8.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>1500 + 390 UC</h3>
+<p>22.49 €</p>
+<button onclick="order('1500 + 390 UC',22.49)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>3000 + 1030 UC</h3>
+<p>44.99 €</p>
+<button onclick="order('3000 + 1030 UC',44.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>6000 + 2460 UC</h3>
+<p>89.99 €</p>
+<button onclick="order('6000 + 2460 UC',89.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>12000 + 4920 UC</h3>
+<p>179.99 €</p>
+<button onclick="order('12000 + 4920 UC',179.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>18000 + 7380 UC</h3>
+<p>269.99 €</p>
+<button onclick="order('18000 + 7380 UC',269.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>24000 + 9840 UC</h3>
+<p>359.99 €</p>
+<button onclick="order('24000 + 9840 UC',359.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>30000 + 12300 UC</h3>
+<p>449.99 €</p>
+<button onclick="order('30000 + 12300 UC',449.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>36000 + 14760 UC</h3>
+<p>539.99 €</p>
+<button onclick="order('36000 + 14760 UC',539.99)">شراء</button>
+</div>
+
+<div class="card">
+<img src="uc.png" class="uc">
+<h3>60000 + 24600 UC</h3>
+<p>899.99 €</p>
+<button onclick="order('60000 + 24600 UC',899.99)">شراء</button>
+</div>
+
+</div>
+
+<script>
+
+function order(name,price){
+
+let player=document.getElementById("playerid").value;
+
+if(player==""){
+alert("اكتب Player ID");
+return;
+}
+
+let message="طلب شحن PUBG UC%0A";
+message+="Player ID: "+player+"%0A";
+message+="الباقة: "+name+"%0A";
+message+="السعر: "+price+" EUR";
+
+let url="https://wa.me/35679999556?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
